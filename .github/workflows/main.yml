@@ -1,0 +1,19 @@
+name: workflow__11
+on: 
+  push:
+    branches: main
+jobs:
+  workflow__11:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout__repository
+        uses: actions/checkout@v4
+      - name: check all files
+        run: ls
+      - name: check html files
+        run: test index.html
+      - name: check css files
+        run: test style.css
+      - name: sucess msg
+        run: echo "Connections__Of-__workflow__sucessfully__Connected"
+        
